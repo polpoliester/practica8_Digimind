@@ -4,10 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
+    android:paddingHorizontal="30dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="56dp"
     tools:context=".ui.dashboard.DashboardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
     <ImageView
         android:layout_width="match_parent"
@@ -24,6 +33,7 @@
         android:text="@string/reminder_name"/>
 
     <EditText
+        android:id="@+id/et_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -53,6 +63,7 @@
                 />
 
             <CheckBox
+                android:id="@+id/checkMonday"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_height="wrap_content"/>
@@ -68,6 +79,7 @@
                 />
 
             <CheckBox
+                android:id="@+id/checkTuesday"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_height="wrap_content"/>
@@ -83,6 +95,7 @@
                 />
 
             <CheckBox
+                android:id="@+id/checkWednesday"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_height="wrap_content"/>
@@ -98,6 +111,7 @@
                 />
 
             <CheckBox
+                android:id="@+id/checkThursday"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_height="wrap_content"/>
@@ -113,6 +127,23 @@
                 />
 
             <CheckBox
+                android:id="@+id/checkFriday"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/saturday"
+                android:textSize="20sp"
+                />
+
+            <CheckBox
+                android:id="@+id/checkSaturday"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_height="wrap_content"/>
@@ -128,21 +159,7 @@
                 />
 
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_height="wrap_content"/>
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:text="@string/s"
-                android:textSize="20sp"
-                />
-
-            <CheckBox
+                android:id="@+id/checkSunday"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_height="wrap_content"/>
@@ -159,9 +176,27 @@
         />
 
     <Button
+        android:id="@+id/btn_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/set_time"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
         android:background="?android:attr/selectableItemBackground"
+        android:textSize="16sp"
         />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorAccent"
+            />
+
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
+

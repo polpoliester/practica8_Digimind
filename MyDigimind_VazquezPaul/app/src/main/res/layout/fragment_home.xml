@@ -17,7 +17,7 @@
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="7.2"
+        android:baselineAligned = "false"
         android:numColumns="3">
     </GridView>
 
